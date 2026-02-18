@@ -9,12 +9,6 @@ from engines.analyzer import analyze_resume
 
 load_dotenv()
 
-# --- Page Config ---
-    page_title="AI Resume Matcher",
-    page_icon="📄",
-    layout="wide",
-)
-
 # --- Custom CSS ---
 st.markdown("""
 <style>
