@@ -536,6 +536,51 @@ st.markdown("""
         font-weight: 700;
         color: #1e293b;
     }
+
+    .howto-box {
+        background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+        border: 1px solid #86efac;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .howto-box h3 {
+        margin: 0 0 0.8rem 0;
+        color: #166534;
+        font-family: 'Inter', sans-serif;
+    }
+    .howto-box code {
+        background: #166534;
+        color: #f0fdf4;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+    }
+    .howto-box .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+    .howto-box .step-num {
+        background: #166534;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+    .howto-box .step-text {
+        color: #1e293b;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -566,6 +611,59 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
+
+# ── How to Run ────────────────────────────────────────────────────────────────
+
+with st.expander("How do I run these apps?", expanded=False):
+    st.markdown("""
+    <div class="howto-box">
+        <h3>Running Any Project</h3>
+        <p style="color:#475569; font-size:0.9rem; margin-bottom:1rem;">
+            Each project is a standalone Streamlit app powered by Claude (Anthropic).
+            You'll need Python 3.10+, an Anthropic API key, and the project source code.
+        </p>
+        <div class="step">
+            <span class="step-num">1</span>
+            <span class="step-text">
+                <strong>Clone the repo</strong> and navigate to a project folder<br/>
+                <code>cd 01_AI_Resume_Matcher</code>
+            </span>
+        </div>
+        <div class="step">
+            <span class="step-num">2</span>
+            <span class="step-text">
+                <strong>Create a virtual environment</strong> and install dependencies<br/>
+                <code>python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt</code>
+            </span>
+        </div>
+        <div class="step">
+            <span class="step-num">3</span>
+            <span class="step-text">
+                <strong>Add your API key</strong> &mdash; copy <code>.env.example</code> to <code>.env</code> and paste your Anthropic API key, or enter it in the app sidebar<br/>
+                <code>cp .env.example .env && nano .env</code>
+            </span>
+        </div>
+        <div class="step">
+            <span class="step-num">4</span>
+            <span class="step-text">
+                <strong>Launch the app</strong><br/>
+                <code>streamlit run app.py</code>
+            </span>
+        </div>
+        <p style="color:#475569; font-size:0.85rem; margin-top:1rem; margin-bottom:0;">
+            The app opens at <code>http://localhost:8501</code>. Each project comes pre-filled with
+            realistic sample data so you can test immediately.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    **Tech Stack (all 58 projects):**
+    - **UI:** Streamlit
+    - **AI:** Anthropic Claude Sonnet 4.5
+    - **Charts:** Plotly + Pandas
+    - **Pattern:** Structured JSON output from LLM, parsed and rendered as interactive dashboards
+    """)
 
 # ── Category Stats Bar ───────────────────────────────────────────────────────
 
@@ -620,7 +718,9 @@ for row in rows:
                 <div class="card-icon">{proj["icon"]}</div>
                 <div class="card-title">{proj["name"]}</div>
                 <div class="card-desc">{proj["desc"]}</div>
-                <div class="card-dir">{proj["dir"]}/</div>
+                <div class="card-dir">
+                    <code>cd {proj["dir"]} && streamlit run app.py</code>
+                </div>
             </div>
             """, unsafe_allow_html=True)
     # Spacer between rows
@@ -633,7 +733,10 @@ st.divider()
 st.markdown("""
 <div style="text-align:center; color:#94a3b8; font-size:0.8rem; padding:1rem 0;">
     <strong>Enterprise AI Projects Showcase</strong><br/>
-    Built with Claude (Anthropic) &amp; Streamlit<br/>
-    Each project: <code>streamlit run XX_Project_Name/app.py</code>
+    Built with Claude (Anthropic) &amp; Streamlit<br/><br/>
+    <a href="https://github.com/HighviewOne/enterprise-ai-showcase" target="_blank"
+       style="color:#a78bfa; text-decoration:none; font-weight:600;">
+       View on GitHub
+    </a>
 </div>
 """, unsafe_allow_html=True)
