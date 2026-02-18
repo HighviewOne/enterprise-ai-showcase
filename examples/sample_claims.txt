@@ -1,0 +1,64 @@
+CLAIM BATCH - January 2025
+
+=== CLAIM #2025-001 ===
+Claimant: Sarah Mitchell, DOB: 1985-03-12
+Policy: PPO Gold Plan, ID: PPG-88421
+Provider: Metro General Hospital
+Service Date: 2025-01-05
+Diagnosis: E11.9 - Type 2 diabetes mellitus without complications
+Procedure: 99214 - Office visit, established patient (Level 4)
+Billed Amount: $285.00
+Notes: Routine follow-up for diabetes management. A1C test ordered.
+Lab: 83036 - Hemoglobin A1c - $45.00
+Supporting Docs: Progress notes attached, prior visit 2024-10-05
+
+=== CLAIM #2025-002 ===
+Claimant: James Rodriguez, DOB: 1992-07-20
+Policy: HMO Basic, ID: HMO-55219
+Provider: Downtown Urgent Care
+Service Date: 2025-01-08
+Diagnosis: S93.401A - Sprain of unspecified ligament of right ankle, initial encounter
+Procedure: 99283 - Emergency department visit (Level 3)
+Billed Amount: $1,450.00
+Additional: 73610 - X-ray ankle, 3 views - $320.00
+Notes: Patient presented to ER for ankle sprain. No fracture on X-ray. Ace wrap applied.
+Supporting Docs: X-ray report attached. No referral on file for HMO patient.
+ALERT: HMO patient used ER without PCP referral.
+
+=== CLAIM #2025-003 ===
+Claimant: Linda Chen, DOB: 1978-11-30
+Policy: PPO Silver, ID: PPS-33017
+Provider: Women's Health Specialists
+Service Date: 2025-01-10
+Diagnosis: N92.0 - Excessive and frequent menstruation with regular cycle
+Procedure: 76856 - Ultrasound, pelvic, non-obstetric, complete
+Billed Amount: $850.00
+Procedure: 99213 - Office visit (Level 3)
+Billed Amount: $175.00
+Notes: Evaluation for heavy menstrual bleeding. Pelvic ultrasound performed.
+Supporting Docs: Ultrasound report shows uterine fibroids. Recommending follow-up MRI.
+Pre-auth status: NOT obtained for ultrasound.
+
+=== CLAIM #2025-004 ===
+Claimant: Robert Kim, DOB: 1960-05-18
+Policy: Medicare Supplement, ID: MED-77820
+Provider: Orthopedic Associates
+Service Date: 2025-01-12
+Diagnosis: M17.11 - Primary osteoarthritis, right knee
+Procedure: 20610 - Arthrocentesis, aspiration, major joint - $380.00
+Procedure: J7325 - Hyaluronate injection (Synvisc) - $1,200.00
+Procedure: 99213 - Office visit (Level 3) - $175.00
+Notes: Third series of viscosupplementation injections this year.
+Supporting Docs: Prior authorization approved for 3 injection series. This is 4th.
+ALERT: Exceeds authorized injection series count.
+
+=== CLAIM #2025-005 ===
+Claimant: Emily Watson, DOB: 2001-09-25
+Policy: PPO Gold, ID: PPG-44156
+Provider: ClearMind Behavioral Health
+Service Date: 2025-01-14
+Diagnosis: F41.1 - Generalized anxiety disorder
+Procedure: 90834 - Psychotherapy, 45 min
+Billed Amount: $200.00
+Notes: Ongoing therapy. Patient showing improvement. Discussed CBT techniques.
+Supporting Docs: Treatment plan on file. Session notes attached. Within benefit limits.

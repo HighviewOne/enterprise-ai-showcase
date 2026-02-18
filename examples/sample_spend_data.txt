@@ -1,0 +1,73 @@
+MONTHLY SPEND REPORT - January 2025
+Company: TechVenture Inc.
+Department: Engineering & Operations
+Budget: $185,000/month
+
+=== VENDOR SPEND LOG ===
+
+AWS (Cloud Infrastructure)
+- Dec 2024: $42,300
+- Jan 2025: $78,500 [UNUSUAL - nearly doubled]
+- Contract: $45,000/month cap
+- Notes: New GPU instances spun up, no approved project ticket found
+
+Salesforce (CRM)
+- Dec 2024: $12,400
+- Jan 2025: $12,400
+- Contract: $12,400/month
+- Notes: Stable, 85 active licenses out of 120 purchased
+
+Snowflake (Data Warehouse)
+- Dec 2024: $18,200
+- Jan 2025: $31,800 [SPIKE]
+- Contract: Usage-based, typical $15K-$20K
+- Notes: Large ad-hoc queries from marketing team, no capacity planning
+
+Datadog (Monitoring)
+- Dec 2024: $8,500
+- Jan 2025: $8,700
+- Contract: $8,500/month
+- Notes: Slight increase from new host agents
+
+GitHub Enterprise
+- Dec 2024: $4,200
+- Jan 2025: $4,200
+- Contract: $4,200/month
+- Notes: 60 seats, 52 active users
+
+Zoom (Communications)
+- Dec 2024: $2,800
+- Jan 2025: $2,800
+- Contract: $2,800/month
+- Notes: 100 Pro licenses
+
+Acme Consulting LLC [NEW VENDOR]
+- Dec 2024: $0
+- Jan 2025: $45,000
+- Contract: None on file
+- Notes: Wire transfer, no PO, no approved vendor form, invoice says "AI Strategy Consulting"
+
+Adobe Creative Cloud
+- Dec 2024: $3,600
+- Jan 2025: $3,600
+- Contract: $3,600/month
+- Notes: 15 licenses, design team
+
+Jira/Atlassian
+- Dec 2024: $2,100
+- Jan 2025: $2,100
+- Contract: $2,100/month
+- Notes: Standard
+
+PagerDuty
+- Dec 2024: $1,800
+- Jan 2025: $1,800
+- Contract: $1,800/month
+
+DUPLICATE PAYMENT DETECTED:
+- Datadog: $8,700 paid on Jan 5 AND $8,700 paid on Jan 19 (same invoice #DD-2025-0142)
+
+=== SUMMARY ===
+Total Jan 2025 Spend: $208,300 (Budget: $185,000)
+Over budget by: $23,300 (12.6%)
+Previous 3-month average: $96,200/month (excl. Acme)

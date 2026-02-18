@@ -1,0 +1,70 @@
+CUSTOMER ONBOARDING BATCH - Risk Screening
+
+=== CUSTOMER #1 ===
+Name: John A. Peterson
+DOB: 1975-06-15
+Nationality: United States
+Occupation: Investment Manager at Global Wealth Partners
+Source of Funds: Employment income, investment returns
+Annual Income: $450,000
+Account Type: Premium Investment Account
+Address: 245 Park Avenue, New York, NY 10167
+ID: US Passport #556781234
+PEP Status: No
+Adverse Media: None found
+Transaction Pattern: Regular wire transfers $50K-$200K to/from offshore entities
+
+=== CUSTOMER #2 ===
+Name: Dmitri Volkov
+DOB: 1968-03-22
+Nationality: Russia
+Occupation: CEO, Volkov Energy Ltd (registered in Cyprus)
+Source of Funds: Business revenue from oil & gas trading
+Annual Income: $2,500,000
+Account Type: Corporate + Personal accounts
+Address: 12 Larnaca Marina, Larnaca, Cyprus
+ID: Cyprus Passport #CY88421567
+PEP Status: POTENTIAL - Former advisor to Russian energy ministry (2010-2016)
+Adverse Media: Mentioned in 2022 article about Russian oligarch sanctions
+Transaction Pattern: Large lump sums ($1M+) from shell companies in BVI
+
+=== CUSTOMER #3 ===
+Name: Maria Santos-Garcia
+DOB: 1990-11-08
+Nationality: Colombia
+Occupation: Software Engineer at TechCorp Inc.
+Source of Funds: Employment salary
+Annual Income: $135,000
+Account Type: Standard Checking + Savings
+Address: 1200 Main Street, Apt 4B, San Jose, CA 95131
+ID: US Green Card #GC-44219876
+PEP Status: No
+Adverse Media: None
+Transaction Pattern: Regular payroll deposits, normal consumer spending
+
+=== CUSTOMER #4 ===
+Name: Al-Rashid Investment Group
+Entity Type: LLC registered in Delaware
+Beneficial Owner: Ahmed Al-Rashid (UAE national)
+BO Occupation: Chairman, Al-Rashid Holdings (diversified conglomerate)
+Source of Funds: Real estate and construction revenue
+Annual Turnover: $15,000,000
+Account Type: Commercial Operating Account
+Registered Address: 1209 Orange Street, Wilmington, DE 19801
+BO PEP Status: CONFIRMED - Member of Abu Dhabi Chamber of Commerce
+Adverse Media: Named in 2023 report regarding real estate money laundering concerns in UAE
+Transaction Pattern: Irregular large deposits ($500K-$5M), frequent international wires
+
+=== CUSTOMER #5 ===
+Name: Lisa Chen
+DOB: 1985-09-14
+Nationality: Canada
+Occupation: University Professor, McGill University
+Source of Funds: Academic salary, book royalties
+Annual Income: $95,000
+Account Type: Standard Savings Account
+Address: 3456 Rue Sherbrooke, Montreal, QC H3A 1B9
+ID: Canadian Passport #HC774521
+PEP Status: No
+Adverse Media: None
+Transaction Pattern: Regular salary deposits, modest spending, occasional transfers to family in China

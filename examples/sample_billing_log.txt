@@ -1,0 +1,20 @@
+DATE       | ATTORNEY    | CLIENT        | MATTER           | HOURS | RATE  | DESCRIPTION
+2025-01-06 | J. Smith    | Acme Corp     | Patent Filing    | 2.5   | $450  | Worked on patent stuff
+2025-01-06 | J. Smith    | Acme Corp     | Patent Filing    | 1.0   | $450  | Phone call
+2025-01-06 | J. Smith    | Acme Corp     | Patent Filing    | 3.5   | $450  | Research and analysis
+2025-01-07 | M. Jones    | Beta Inc      | M&A Due Dil.     | 8.5   | $550  | Due diligence review of target company financial statements and contracts
+2025-01-07 | M. Jones    | Beta Inc      | M&A Due Dil.     | 2.0   | $550  | Internal meeting
+2025-01-07 | A. Lee      | Acme Corp     | Patent Filing    | 4.0   | $350  | Draft patent claims for autonomous vehicle navigation system
+2025-01-08 | J. Smith    | Gamma LLC     | Employment Lit.  | 6.0   | $450  | Various tasks related to the case
+2025-01-08 | J. Smith    | Gamma LLC     | Employment Lit.  | 0.1   | $450  | Reviewed email
+2025-01-08 | S. Patel    | Acme Corp     | Patent Filing    | 1.5   | $275  | Paralegal - organized prior art documents and prepared filing checklist
+2025-01-09 | M. Jones    | Beta Inc      | M&A Due Dil.     | 12.0  | $550  | Continued due diligence work
+2025-01-09 | J. Smith    | Acme Corp     | Patent Filing    | 2.0   | $450  | Emails and calls
+2025-01-09 | A. Lee      | Delta Corp    | Trademark Reg.   | 3.0   | $350  | Conducted comprehensive trademark search and clearance analysis for DELTAFORCE mark
+2025-01-10 | J. Smith    | Gamma LLC     | Employment Lit.  | 4.5   | $450  | Drafted motion to dismiss plaintiff's amended complaint
+2025-01-10 | M. Jones    | Beta Inc      | M&A Due Dil.     | 7.0   | $550  | Reviewed IP portfolio, identified 3 potential infringement risks, drafted summary memo
+2025-01-10 | J. Smith    | Acme Corp     | Patent Filing    | 0.5   | $450  | Admin
+2025-01-10 | R. Chen     | Epsilon Ltd   | Reg. Compliance  | 5.0   | $400  | Analyzed new SEC reporting requirements and drafted compliance gap analysis
+2025-01-11 | J. Smith    | Gamma LLC     | Employment Lit.  | 3.0   | $450  | Stuff
+2025-01-11 | M. Jones    | Beta Inc      | M&A Due Dil.     | 4.0   | $550  | Prepared summary of key findings for client presentation
+2025-01-11 | A. Lee      | Acme Corp     | Patent Filing    | 6.0   | $350  | Revised patent claims based on prior art review, coordinated with inventor on technical specifications

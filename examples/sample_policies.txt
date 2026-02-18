@@ -1,0 +1,83 @@
+=== HR POLICY (Revised Jan 2024) ===
+
+HR-1: Remote Work Policy
+Employees may work remotely up to 3 days per week with manager approval.
+Remote employees must be available during core hours (9 AM - 3 PM local time).
+All remote work arrangements must be documented and reviewed quarterly.
+
+HR-2: Data Access for Employees
+All employees are granted access to company systems based on their role.
+Access reviews are conducted annually by HR.
+Terminated employees must have access revoked within 48 hours.
+
+HR-3: Employee Monitoring
+The company reserves the right to monitor all communications on company devices.
+Employee personal devices used for work are not subject to monitoring.
+All monitoring must comply with local privacy laws.
+
+HR-4: Time-Off Policy
+Employees are entitled to 15 days PTO per year, accruing monthly.
+Unused PTO may be carried over up to 5 days into the next calendar year.
+PTO requests require 2 weeks advance notice for periods over 3 days.
+
+=== IT SECURITY POLICY (Revised Mar 2023) ===
+
+IT-1: Access Control
+All system access requires multi-factor authentication.
+Access is reviewed semi-annually by IT Security.
+Terminated employees must have access revoked within 24 hours.
+
+IT-2: Device Management
+Only company-issued devices may connect to the corporate network.
+Personal devices may connect to the guest WiFi network only.
+All company devices must have endpoint protection software installed.
+
+IT-3: Data Classification
+Data is classified as: Public, Internal, Confidential, Restricted.
+Confidential and Restricted data must be encrypted at rest.
+Internal data does not require encryption.
+All customer data is classified as Restricted.
+
+IT-4: Incident Response
+Security incidents must be reported within 1 hour of discovery.
+The CISO must be notified of all Critical and High severity incidents.
+Incident post-mortems are required within 5 business days.
+
+=== DATA PRIVACY POLICY (Revised Jun 2022) ===
+
+DP-1: Data Collection
+Personal data may only be collected with explicit user consent.
+Data collection must be limited to what is necessary for the stated purpose.
+Consent records must be maintained for 3 years.
+
+DP-2: Data Retention
+Customer data must be retained for a minimum of 5 years for regulatory purposes.
+Personal data must be deleted within 30 days of a deletion request (GDPR Right to Erasure).
+Backup data is exempt from deletion requirements.
+
+DP-3: Data Sharing
+Customer data may not be shared with third parties without written consent.
+Data sharing agreements must be reviewed by Legal before execution.
+Anonymized data may be shared freely for research purposes.
+
+DP-4: Breach Notification
+Data breaches must be reported to affected individuals within 72 hours.
+The DPO must be notified immediately upon discovery of any breach.
+Breaches affecting fewer than 100 records do not require individual notification.
+
+=== COMPLIANCE POLICY (Revised Nov 2023) ===
+
+CP-1: Regulatory Training
+All employees must complete compliance training within 30 days of hire.
+Annual refresher training is mandatory for all employees.
+Training completion rates must exceed 95% company-wide.
+
+CP-2: Whistleblower Protection
+Employees may report compliance concerns anonymously through the ethics hotline.
+Retaliation against whistleblowers is strictly prohibited.
+All reports must be investigated within 14 business days.
+
+CP-3: Record Retention
+Financial records must be retained for 7 years (SOX requirement).
+HR records must be retained for 5 years after employment ends.
+All records retention follows the longest applicable requirement.

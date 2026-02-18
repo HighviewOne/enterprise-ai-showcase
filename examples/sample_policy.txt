@@ -1,0 +1,30 @@
+ACME CORP - INTERNAL POLICIES HANDBOOK
+Version 3.2 | Effective: January 2025
+
+SECTION 4: EXPENSE AND PROCUREMENT POLICY
+4.1 All expenses above $500 require prior manager approval.
+4.2 Expenses above $5,000 require VP-level approval and a purchase order.
+4.3 Employee reimbursements must be submitted within 30 days of the expense.
+4.4 Corporate credit cards may not be used for personal expenses.
+4.5 All vendor contracts above $10,000 must go through the procurement review process.
+
+SECTION 7: DATA HANDLING AND PRIVACY POLICY
+7.1 Customer PII must be encrypted at rest and in transit (AES-256 minimum).
+7.2 Access to customer data requires role-based authorization and is logged.
+7.3 Customer data retention shall not exceed 24 months unless legally required.
+7.4 Data exports containing PII must be approved by the Data Privacy Officer.
+7.5 All employees must complete annual data privacy training.
+
+SECTION 9: IT SECURITY POLICY
+9.1 Passwords must be at least 12 characters with complexity requirements.
+9.2 Multi-factor authentication (MFA) is required for all systems.
+9.3 Software installations require IT department approval.
+9.4 Security patches must be applied within 14 days of release.
+9.5 USB storage devices are prohibited on company networks.
+
+SECTION 11: HR AND EMPLOYMENT POLICY
+11.1 All hiring decisions must include at least two interview rounds.
+11.2 Background checks are mandatory for all new hires.
+11.3 Employee performance reviews must be conducted annually.
+11.4 Overtime must be pre-approved by the department manager.
+11.5 All workplace incidents must be reported within 24 hours.

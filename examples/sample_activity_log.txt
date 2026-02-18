@@ -1,0 +1,22 @@
+ACTIVITY LOG - Q4 2024 AUDIT SAMPLE
+====================================
+
+2024-10-03 | EXPENSE | John Miller | $8,500 | Software License | Approved by: Team Lead Sarah Kim
+2024-10-05 | EXPENSE | Lisa Park | $450 | Office Supplies | No approval needed
+2024-10-12 | DATA_ACCESS | Mike Chen | Exported customer_emails.csv (45,000 records) | No DPO approval logged
+2024-10-14 | EXPENSE | Tom Davis | $12,000 | Vendor: CloudHost Inc. | No purchase order found
+2024-10-18 | IT_SECURITY | System Alert | 3 failed login attempts from unknown IP for admin account
+2024-10-20 | EXPENSE | Sarah Kim | $2,300 | Client dinner + personal hotel stay | Corporate card
+2024-10-22 | HR | New Hire: Alex Brown | Position: Senior Developer | Background check: PENDING
+2024-10-22 | HR | Alex Brown | Started work | Background check still pending
+2024-10-25 | DATA_ACCESS | Former employee account (jane.doe@acme.com) accessed CRM | Account not deactivated
+2024-10-30 | EXPENSE | John Miller | Reimbursement for Aug 15 expense ($780) | Submitted 76 days late
+2024-11-02 | IT_SECURITY | Patch CVE-2024-8901 released Oct 1 | Still not applied (32 days)
+2024-11-05 | DATA_ACCESS | Intern account has access to full customer database | No role restriction
+2024-11-10 | HR | Workplace incident report: slip and fall in warehouse | Reported 5 days after incident
+2024-11-15 | IT_SECURITY | USB drive detected on workstation WS-1042 | No alert triggered
+2024-11-18 | EXPENSE | Lisa Park | $6,200 | Marketing campaign | Approved by: Team Lead (not VP)
+2024-11-20 | DATA | Customer records from 2019 found in active database | 60 months old
+2024-12-01 | HR | Annual review completion rate: 62% of employees reviewed
+2024-12-05 | IT_SECURITY | MFA disabled for 8 accounts in sales department per manager request
+2024-12-10 | TRAINING | Data privacy training completion: 71% of employees (deadline was Nov 30)

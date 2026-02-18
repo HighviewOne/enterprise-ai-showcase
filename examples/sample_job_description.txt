@@ -1,0 +1,36 @@
+Senior Backend Engineer - Platform Team
+
+About the Role:
+We are looking for a Senior Backend Engineer to join our Platform team. You will design,
+build, and maintain core services that power our product used by millions of users globally.
+
+Responsibilities:
+- Design and implement scalable backend services in Python and Go
+- Build and maintain high-throughput data processing pipelines
+- Architect microservices with a focus on reliability and performance
+- Lead technical design reviews and mentor junior engineers
+- Collaborate with cross-functional teams including Product, Data, and DevOps
+- Drive best practices in testing, code quality, and observability
+- Participate in on-call rotation and incident response
+
+Requirements:
+- 5+ years of backend engineering experience
+- Strong proficiency in Python; experience with Go is a plus
+- Experience designing and operating distributed systems at scale
+- Hands-on experience with cloud platforms (AWS preferred)
+- Experience with containerization (Docker, Kubernetes)
+- Strong understanding of relational databases (PostgreSQL) and caching (Redis)
+- Experience with message queues (Kafka, RabbitMQ, or SQS)
+- Familiarity with infrastructure-as-code tools (Terraform, CloudFormation)
+- Excellent communication and collaboration skills
+
+Nice to Have:
+- Experience with GraphQL
+- Familiarity with machine learning pipelines
+- Contributions to open-source projects
+- Experience with observability tools (Datadog, Prometheus, Grafana)
+
+Benefits:
+- Competitive salary ($180K - $220K)
+- Remote-friendly with offices in SF, NYC, and Austin
+- Equity, 401k matching, health/dental/vision

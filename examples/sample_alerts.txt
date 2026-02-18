@@ -1,0 +1,16 @@
+TIMESTAMP            | SOURCE       | SEVERITY | ALERT
+2025-01-15 02:31:05  | Datadog      | CRITICAL | CPU usage on prod-api-03 exceeded 95% for 5 minutes
+2025-01-15 02:31:12  | PagerDuty    | HIGH     | Service: payment-service - Health check failing
+2025-01-15 02:31:18  | CloudWatch   | WARNING  | RDS connection pool exhausted on prod-db-primary (max 200 reached)
+2025-01-15 02:31:22  | Datadog      | CRITICAL | Error rate on /api/v2/checkout spiked to 42% (threshold: 5%)
+2025-01-15 02:31:30  | Sentry       | ERROR    | java.sql.SQLException: Cannot acquire connection from pool - Timeout after 30000ms (payment-service:CheckoutHandler.java:147)
+2025-01-15 02:31:45  | Datadog      | HIGH     | Latency P99 on payment-service jumped to 12.4s (baseline: 200ms)
+2025-01-15 02:32:01  | CloudWatch   | WARNING  | ELB 5xx errors increased to 340/min on prod-alb (baseline: 2/min)
+2025-01-15 02:32:15  | Kubernetes   | WARNING  | Pod payment-service-7d8f9 restarted 3 times in last 5 minutes (OOMKilled)
+2025-01-15 02:32:30  | Datadog      | HIGH     | Memory usage on prod-api-03 at 94% (threshold: 85%)
+2025-01-15 02:32:45  | Sentry       | ERROR    | TimeoutError: Request to inventory-service timed out after 10s (payment-service:InventoryClient.java:89)
+2025-01-15 02:33:00  | Grafana      | WARNING  | Redis cache hit ratio dropped to 12% (baseline: 95%) on prod-redis-01
+2025-01-15 02:33:15  | PagerDuty    | CRITICAL | Multiple services affected - potential cascading failure detected
+2025-01-15 02:33:30  | CloudWatch   | INFO     | Auto-scaling triggered: adding 2 instances to payment-service ASG
+2025-01-15 02:34:00  | Datadog      | HIGH     | Disk I/O on prod-db-primary at 98% utilization
+2025-01-15 02:34:30  | Sentry       | ERROR    | org.postgresql.util.PSQLException: FATAL: too many connections for role "app_user" (prod-db-primary)

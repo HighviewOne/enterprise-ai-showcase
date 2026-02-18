@@ -1,0 +1,75 @@
+SMART GRID CONTROLLER - SYSTEM REQUIREMENTS SPECIFICATION
+Version 2.1 | Last Updated: 2025-03-15
+
+1. INTRODUCTION
+This document specifies the requirements for the Smart Grid Controller (SGC),
+a system designed to monitor and manage electrical grid assets across substations.
+
+2. FUNCTIONAL REQUIREMENTS
+
+2.1 Real-Time Monitoring
+The system shall collect telemetry data from all connected substations at intervals
+no greater than 5 seconds. Data shall include voltage, current, frequency, and
+power factor measurements.
+
+2.2 Alarm Management
+The system shall generate alarms when any measured parameter exceeds predefined
+thresholds. Alarms shall be categorized as Critical, Warning, or Informational.
+Critical alarms must be acknowledged within 60 seconds.
+
+2.3 Load Balancing
+The system shall automatically redistribute load across substations when any single
+substation reaches 85% capacity. Load redistribution shall complete within 30 seconds.
+
+2.4 Historical Data Storage
+All telemetry data shall be stored for a minimum of 7 years to comply with
+regulatory requirements (NERC CIP-010). Data older than 90 days may be moved to
+archive storage.
+
+2.5 User Interface
+The system shall provide a web-based dashboard accessible from standard browsers
+(Chrome, Firefox, Edge). The dashboard shall display real-time grid topology with
+color-coded status indicators.
+
+3. NON-FUNCTIONAL REQUIREMENTS
+
+3.1 Performance
+The system shall support up to 500 simultaneous substations without degradation.
+Response time for any user action shall not exceed 2 seconds under normal load.
+
+3.2 Availability
+The system shall maintain 99.99% uptime (less than 52.6 minutes downtime per year).
+Failover to backup systems shall complete within 15 seconds.
+
+3.3 Security
+All communications between the controller and substations shall use TLS 1.3 encryption.
+User authentication shall support multi-factor authentication (MFA). All system access
+shall be logged and auditable.
+
+3.4 Scalability
+The system shall be designed to scale to 2000 substations without architectural changes.
+The system should support up to 500 substations without degradation.
+
+4. INTERFACE REQUIREMENTS
+
+4.1 SCADA Integration
+The system shall integrate with existing SCADA systems using the IEC 61850 protocol.
+Data exchange latency shall not exceed 100 milliseconds.
+
+4.2 External APIs
+The system shall provide RESTful APIs for third-party integration. API response time
+shall not exceed 500 milliseconds for 95% of requests.
+
+4.3 Legacy Support
+The system shall support Modbus RTU protocol for legacy equipment. The system
+shall require all communications to use IEC 61850 protocol exclusively.
+
+5. COMPLIANCE REQUIREMENTS
+
+5.1 Regulatory
+The system shall comply with NERC CIP standards (CIP-002 through CIP-014).
+Annual compliance reports shall be automatically generated.
+
+5.2 Environmental
+All hardware components shall operate within -40C to +60C temperature range.
+The system shall meet EN 50121-4 electromagnetic compatibility standards.
