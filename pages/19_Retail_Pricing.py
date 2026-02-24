@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from dotenv import load_dotenv
 
-from engines.pricing_engine import analyze_pricing
+from engines.retail_pricing_engine import analyze_pricing
 
 load_dotenv()
 

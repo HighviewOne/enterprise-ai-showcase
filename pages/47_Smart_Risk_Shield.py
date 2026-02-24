@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from dotenv import load_dotenv
 
-from engines.risk_engine import screen_customer
+from engines.smart_risk_engine import screen_customer
 
 load_dotenv()
 

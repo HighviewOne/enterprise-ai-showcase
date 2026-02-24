@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from dotenv import load_dotenv
 
-from engines.risk_engine import assess_risk
+from engines.kyc_risk_engine import assess_risk
 
 load_dotenv()
 
