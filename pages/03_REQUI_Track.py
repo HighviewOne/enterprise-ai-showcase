@@ -8,8 +8,8 @@ import plotly.graph_objects as go
 import streamlit as st
 from dotenv import load_dotenv
 
-from engines.doc_parser import extract_text
-from engines.analyzer import extract_requirements, detect_contradictions, chat_about_requirements
+from engines.requi_doc_parser import extract_text
+from engines.requi_analyzer import extract_requirements, detect_contradictions, chat_about_requirements
 
 load_dotenv()
 

@@ -2,11 +2,11 @@
 
 import os
 import json
-from engines.datetime import datetime
+from datetime import datetime
 import streamlit as st
 from dotenv import load_dotenv
 
-from engines.coach import get_coach_response
+from engines.habit_coach import get_coach_response
 
 load_dotenv()
 

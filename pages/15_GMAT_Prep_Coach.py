@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from dotenv import load_dotenv
 
-from engines.coach import generate_questions, evaluate_answers
+from engines.gmat_coach import generate_questions, evaluate_answers
 
 load_dotenv()
 
