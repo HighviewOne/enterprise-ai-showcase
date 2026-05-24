@@ -1,4 +1,9 @@
-"""Document parsing utilities for requirement documents."""
+"""Shared document parsing utilities.
+
+Single source of truth for extracting text from uploaded files across all
+pages (PDF, DOCX, and plain-text formats). Parsing is done in-memory from
+bytes — no temp files are written.
+"""
 
 import io
 import pdfplumber
@@ -30,7 +35,7 @@ def extract_text(file_name: str, file_bytes: bytes) -> str:
         return extract_text_from_pdf(file_bytes)
     elif name_lower.endswith(".docx"):
         return extract_text_from_docx(file_bytes)
-    elif name_lower.endswith(".txt"):
+    elif name_lower.endswith((".txt", ".csv", ".log")):
         return extract_text_from_txt(file_bytes)
     else:
         raise ValueError(f"Unsupported file type: {file_name}. Use PDF, DOCX, or TXT.")

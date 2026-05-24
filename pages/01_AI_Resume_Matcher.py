@@ -5,7 +5,7 @@ import html
 import streamlit as st
 from dotenv import load_dotenv
 
-from engines.resume_parser import extract_text
+from engines.doc_parser import extract_text
 from engines.resume_analyzer import analyze_resume
 
 load_dotenv()
