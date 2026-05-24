@@ -1,6 +1,7 @@
 """AI Event Planner - Streamlit Application."""
 
 import os
+import html
 import json
 import pandas as pd
 import plotly.graph_objects as go
@@ -35,7 +36,7 @@ st.markdown("""
 api_key = os.getenv("ANTHROPIC_API_KEY", "")
 with st.sidebar:
     st.header("Settings")
-    api_key_input = st.text_input("Anthropic API Key", value=api_key, type="password")
+    api_key_input = st.text_input("Anthropic API Key", value="", type="password")
     if api_key_input:
         api_key = api_key_input
 
@@ -157,7 +158,7 @@ if submitted:
     cols = st.columns(min(len(venues), 3)) if venues else []
     for i, venue in enumerate(venues):
         with cols[i % len(cols)]:
-            pros = "".join(f'<span class="tag">{p}</span>' for p in venue.get("pros", []))
+            pros = "".join(f'<span class="tag">{html.escape(str(p))}</span>' for p in venue.get("pros", []))
             st.markdown(f"""<div class="venue-card">
                 <h4 style="margin:0;">{venue.get('name', '')}</h4>
                 <small>{venue.get('type', '')} | {venue.get('capacity', '')} |

@@ -1,6 +1,7 @@
 """AI Gym & Fitness Assistant - Streamlit Application."""
 
 import os
+import html
 import json
 import pandas as pd
 import plotly.graph_objects as go
@@ -37,7 +38,7 @@ st.markdown("""
 api_key = os.getenv("ANTHROPIC_API_KEY", "")
 with st.sidebar:
     st.header("Settings")
-    api_key_input = st.text_input("Anthropic API Key", value=api_key, type="password")
+    api_key_input = st.text_input("Anthropic API Key", value="", type="password")
     if api_key_input:
         api_key = api_key_input
 
@@ -153,9 +154,9 @@ if submitted:
         for w in workouts:
             score = w.get("effectiveness_score", 0)
             s_color = "#4caf50" if score >= 7 else "#ff9800" if score >= 5 else "#f44336"
-            muscles = "".join(f'<span class="muscle-tag">{m}</span>' for m in w.get("muscle_groups_hit", []))
-            strengths = "".join(f'<span class="win-tag">{s}</span>' for s in w.get("strengths", []))
-            improvements = "".join(f'<span class="improve-tag">{i}</span>' for i in w.get("improvements", []))
+            muscles = "".join(f'<span class="muscle-tag">{html.escape(str(m))}</span>' for m in w.get("muscle_groups_hit", []))
+            strengths = "".join(f'<span class="win-tag">{html.escape(str(s))}</span>' for s in w.get("strengths", []))
+            improvements = "".join(f'<span class="improve-tag">{html.escape(str(i))}</span>' for i in w.get("improvements", []))
 
             st.markdown(f"""<div class="workout-card">
                 <span class="score-badge" style="background:{s_color};">{score}/10</span>
@@ -244,7 +245,7 @@ if submitted:
     mot = result.get("motivation", {})
     if mot:
         st.divider()
-        wins = "".join(f'<span class="win-tag">{w}</span>' for w in mot.get("wins", []))
+        wins = "".join(f'<span class="win-tag">{html.escape(str(w))}</span>' for w in mot.get("wins", []))
         st.markdown(f"""<div class="motivation-card">
             <h3>Your Wins This Week</h3>
             <p>{wins}</p>

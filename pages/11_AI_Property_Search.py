@@ -1,6 +1,7 @@
 """AI Property Search & Recommendation - Streamlit Application."""
 
 import os
+import html
 import json
 import pandas as pd
 import plotly.graph_objects as go
@@ -33,7 +34,7 @@ st.markdown("""
 api_key = os.getenv("ANTHROPIC_API_KEY", "")
 with st.sidebar:
     st.header("Settings")
-    api_key_input = st.text_input("Anthropic API Key", value=api_key, type="password")
+    api_key_input = st.text_input("Anthropic API Key", value="", type="password")
     if api_key_input:
         api_key = api_key_input
 
@@ -129,10 +130,10 @@ if submitted:
         for prop in sorted_listings:
             ms = prop.get("match_score", 0)
             badge_color = "#28a745" if ms >= 85 else "#ffc107" if ms >= 70 else "#17a2b8"
-            features = "".join(f'<span class="tag">{f}</span>' for f in prop.get("features", []))
-            pros = "".join(f'<span class="tag pro-tag">{p}</span>' for p in prop.get("pros", []))
-            cons = "".join(f'<span class="tag con-tag">{c}</span>' for c in prop.get("cons", []))
-            reasons = "".join(f'<span class="tag">{r}</span>' for r in prop.get("match_reasons", []))
+            features = "".join(f'<span class="tag">{html.escape(str(f))}</span>' for f in prop.get("features", []))
+            pros = "".join(f'<span class="tag pro-tag">{html.escape(str(p))}</span>' for p in prop.get("pros", []))
+            cons = "".join(f'<span class="tag con-tag">{html.escape(str(c))}</span>' for c in prop.get("cons", []))
+            reasons = "".join(f'<span class="tag">{html.escape(str(r))}</span>' for r in prop.get("match_reasons", []))
 
             st.markdown(f"""<div class="listing-card">
                 <span class="match-badge" style="background:{badge_color};">{ms}% Match</span>

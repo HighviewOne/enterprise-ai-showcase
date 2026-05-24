@@ -1,6 +1,7 @@
 """Marketing AI Assistant for SMBs - Streamlit Application."""
 
 import os
+import html
 import json
 import streamlit as st
 from dotenv import load_dotenv
@@ -49,7 +50,7 @@ st.markdown("""
 api_key = os.getenv("ANTHROPIC_API_KEY", "")
 with st.sidebar:
     st.header("Settings")
-    api_key_input = st.text_input("Anthropic API Key", value=api_key, type="password")
+    api_key_input = st.text_input("Anthropic API Key", value="", type="password")
     if api_key_input:
         api_key = api_key_input
 
@@ -194,7 +195,7 @@ with tab_blog:
                             st.markdown(f"  - {pt}")
                     st.markdown(f"**CTA:** {result.get('cta', '')}")
                     if result.get("internal_link_suggestions"):
-                        tags = "".join(f'<span class="tag">{t}</span>' for t in result["internal_link_suggestions"])
+                        tags = "".join(f'<span class="tag">{html.escape(str(t))}</span>' for t in result["internal_link_suggestions"])
                         st.markdown(f"**Internal Link Topics:** {tags}", unsafe_allow_html=True)
                     st.download_button("Download Outline (JSON)", json.dumps(result, indent=2),
                                        "blog_outline.json", "application/json")
@@ -308,7 +309,7 @@ with tab_persona:
                             for g in psych.get("goals", []):
                                 st.markdown(f"- {g}")
                             st.markdown("**Preferred Channels:**")
-                            tags = "".join(f'<span class="tag">{c}</span>' for c in behav.get("preferred_channels", []))
+                            tags = "".join(f'<span class="tag">{html.escape(str(c))}</span>' for c in behav.get("preferred_channels", []))
                             st.markdown(tags, unsafe_allow_html=True)
                             st.markdown("**Messaging Tips:**")
                             for t in persona.get("messaging_tips", []):

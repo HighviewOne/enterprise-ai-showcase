@@ -1,7 +1,10 @@
-streamlit>=1.30.0
-anthropic>=0.40.0
-pandas>=2.0.0
-plotly>=5.18.0
-python-dotenv>=1.0.0
-pdfplumber>=0.10.0
-python-docx>=1.0.0
+# Pinned with upper bounds for reproducible deploys.
+# NOTE: anthropic is pre-1.0 and can introduce breaking changes between minor
+# releases — bump deliberately and re-test messages.create / content access.
+streamlit>=1.30.0,<2.0.0
+anthropic>=0.40.0,<1.0.0
+pandas>=2.0.0,<3.0.0
+plotly>=5.18.0,<7.0.0
+python-dotenv>=1.0.0,<2.0.0
+pdfplumber>=0.10.0,<1.0.0
+python-docx>=1.0.0,<2.0.0
