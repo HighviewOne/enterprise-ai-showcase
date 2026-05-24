@@ -30,7 +30,7 @@ st.markdown("""
 api_key = os.getenv("ANTHROPIC_API_KEY", "")
 with st.sidebar:
     st.header("Settings")
-    api_key_input = st.text_input("Anthropic API Key", value=api_key, type="password")
+    api_key_input = st.text_input("Anthropic API Key", value="", type="password")
     if api_key_input:
         api_key = api_key_input
     st.divider()

@@ -1,6 +1,7 @@
 """HireQ - AI Mock Interview Coach - Streamlit Application."""
 
 import os
+import html
 import json
 import streamlit as st
 from dotenv import load_dotenv
@@ -31,7 +32,7 @@ st.markdown("""
 api_key = os.getenv("ANTHROPIC_API_KEY", "")
 with st.sidebar:
     st.header("Settings")
-    api_key_input = st.text_input("Anthropic API Key", value=api_key, type="password")
+    api_key_input = st.text_input("Anthropic API Key", value="", type="password")
     if api_key_input:
         api_key = api_key_input
 
@@ -164,11 +165,11 @@ else:
         s_col, i_col = st.columns(2)
         with s_col:
             st.markdown("**Strengths:**")
-            tags = "".join(f'<span class="strength">{s}</span>' for s in ev.get("strengths", []))
+            tags = "".join(f'<span class="strength">{html.escape(str(s))}</span>' for s in ev.get("strengths", []))
             st.markdown(tags, unsafe_allow_html=True)
         with i_col:
             st.markdown("**Areas to Improve:**")
-            tags = "".join(f'<span class="improve">{a}</span>' for a in ev.get("areas_for_improvement", []))
+            tags = "".join(f'<span class="improve">{html.escape(str(a))}</span>' for a in ev.get("areas_for_improvement", []))
             st.markdown(tags, unsafe_allow_html=True)
 
         # Per-question feedback

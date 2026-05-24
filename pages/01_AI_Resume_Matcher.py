@@ -1,6 +1,7 @@
 """AI Resume Matcher - Streamlit Application."""
 
 import os
+import html
 import streamlit as st
 from dotenv import load_dotenv
 
@@ -111,19 +112,19 @@ def render_results(results: dict):
     with left:
         st.subheader("Keywords")
         if results["matched_keywords"]:
-            tags = "".join(f'<span class="tag-matched">{k}</span>' for k in results["matched_keywords"])
+            tags = "".join(f'<span class="tag-matched">{html.escape(str(k))}</span>' for k in results["matched_keywords"])
             st.markdown(f"**Matched:** {tags}", unsafe_allow_html=True)
         if results["missing_keywords"]:
-            tags = "".join(f'<span class="tag-missing">{k}</span>' for k in results["missing_keywords"])
+            tags = "".join(f'<span class="tag-missing">{html.escape(str(k))}</span>' for k in results["missing_keywords"])
             st.markdown(f"**Missing:** {tags}", unsafe_allow_html=True)
 
     with right:
         st.subheader("Skills")
         if results["matched_skills"]:
-            tags = "".join(f'<span class="tag-matched">{s}</span>' for s in results["matched_skills"])
+            tags = "".join(f'<span class="tag-matched">{html.escape(str(s))}</span>' for s in results["matched_skills"])
             st.markdown(f"**Matched:** {tags}", unsafe_allow_html=True)
         if results["missing_skills"]:
-            tags = "".join(f'<span class="tag-missing">{s}</span>' for s in results["missing_skills"])
+            tags = "".join(f'<span class="tag-missing">{html.escape(str(s))}</span>' for s in results["missing_skills"])
             st.markdown(f"**Missing:** {tags}", unsafe_allow_html=True)
 
     st.divider()
@@ -152,7 +153,7 @@ with st.sidebar:
     st.header("Settings")
     api_key_input = st.text_input(
         "Anthropic API Key",
-        value=api_key,
+        value="",
         type="password",
         help="Enter your Anthropic API key. You can also set it in a .env file.",
     )
