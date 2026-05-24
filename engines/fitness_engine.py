@@ -1,7 +1,6 @@
 """AI Fitness Coach engine - analyzes workouts and provides coaching."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 ANALYSIS_PROMPT = """\
 You are an expert personal trainer, exercise scientist, and fitness coach.
@@ -96,16 +95,5 @@ ADDITIONAL NOTES: {notes}
 
 def analyze_fitness(config: dict, api_key: str) -> dict:
     """Analyze workout log and provide coaching recommendations."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = ANALYSIS_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)
