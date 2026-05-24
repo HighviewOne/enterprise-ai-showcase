@@ -1,7 +1,6 @@
 """GridFlow engine - Power grid interconnection analysis and assessment."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 GRID_PROMPT = """\
 You are an expert power grid interconnection engineer and energy analyst. Evaluate whether \
@@ -114,16 +113,5 @@ ADDITIONAL CONTEXT:
 
 def analyze_interconnection(config: dict, api_key: str) -> dict:
     """Analyze grid interconnection feasibility for a new asset."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = GRID_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)

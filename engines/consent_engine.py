@@ -1,7 +1,6 @@
 """Clinical Consent engine - AI-powered consent form analysis for patients."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 CONSENT_PROMPT = """\
 You are an expert in health literacy, clinical trial informed consent, and patient advocacy. \
@@ -121,16 +120,5 @@ PATIENT PROFILE:
 
 def analyze_consent(config: dict, api_key: str) -> dict:
     """Analyze a clinical trial consent form and generate patient-friendly content."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = CONSENT_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)

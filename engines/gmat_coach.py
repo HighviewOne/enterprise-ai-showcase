@@ -1,7 +1,6 @@
 """GMAT Prep Coach engine - generates practice questions and evaluates answers."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 QUESTION_PROMPT = """\
 You are an expert GMAT tutor and test prep coach. Generate a practice question set
@@ -113,33 +112,11 @@ QUESTIONS AND ANSWERS:
 
 def generate_questions(config: dict, api_key: str) -> dict:
     """Generate GMAT practice questions."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = QUESTION_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)
 
 
 def evaluate_answers(qa_data: str, api_key: str) -> dict:
     """Evaluate student answers and provide feedback."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = EVALUATE_PROMPT.format(qa_data=qa_data)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)

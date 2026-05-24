@@ -1,7 +1,6 @@
 """PriceWise AI engine - retail pricing optimization and promotion planning."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 PRICING_PROMPT = """\
 You are an expert retail pricing strategist and revenue optimization consultant.
@@ -114,16 +113,5 @@ ADDITIONAL CONTEXT: {context}
 
 def analyze_pricing(config: dict, api_key: str) -> dict:
     """Analyze pricing and generate recommendations."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = PRICING_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)

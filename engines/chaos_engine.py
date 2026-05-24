@@ -1,7 +1,6 @@
 """Chaos Agent engine - AI-powered chaos engineering for Kubernetes."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 CHAOS_PROMPT = """\
 You are an expert chaos engineer and Kubernetes reliability specialist. Given a cluster \
@@ -109,16 +108,5 @@ CHAOS SCENARIO:
 
 def run_chaos_analysis(config: dict, api_key: str) -> dict:
     """Analyze a chaos engineering scenario and generate resilience findings."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = CHAOS_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)

@@ -1,7 +1,6 @@
 """Software Factory engine - AI-powered technical blueprint generation."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 FACTORY_PROMPT = """\
 You are a senior enterprise architect and technical strategist. Given a business concept \
@@ -170,16 +169,5 @@ PROJECT PARAMETERS:
 
 def generate_blueprint(config: dict, api_key: str) -> dict:
     """Generate a technical blueprint from a business concept."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = FACTORY_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)

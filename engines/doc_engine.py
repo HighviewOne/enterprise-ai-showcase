@@ -1,7 +1,6 @@
 """AI Medical Documentation engine - generates clinical notes from conversations."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 CLINICAL_NOTE_PROMPT = """\
 You are an expert medical documentation specialist and clinical scribe.
@@ -102,16 +101,5 @@ VISIT CONTEXT:
 
 def generate_clinical_note(config: dict, api_key: str) -> dict:
     """Generate a structured clinical note from a conversation transcript."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = CLINICAL_NOTE_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)

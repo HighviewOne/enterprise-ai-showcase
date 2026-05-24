@@ -1,7 +1,6 @@
 """Enterprise Architecture engine - AI-powered architecture design."""
 
-import json
-import anthropic
+from engines.llm import call_claude_json
 
 EA_PROMPT = """\
 You are an expert enterprise architect with deep knowledge of TOGAF, ArchiMate, and \
@@ -96,16 +95,5 @@ PARAMETERS:
 
 def design_architecture(config: dict, api_key: str) -> dict:
     """Generate enterprise architecture blueprint."""
-    client = anthropic.Anthropic(api_key=api_key)
     prompt = EA_PROMPT.format(**config)
-    message = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return call_claude_json(prompt, api_key, max_tokens=4096)
